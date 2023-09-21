@@ -5,15 +5,18 @@ import ArticleList from "./ArticleList";
 import About from "./About";
 import Article from "./Article";
 
-console.log(blogData);
-
+console.log(blogData.title)
 function App() {
   return (
     <div className="App">
-      <Header />
-      <About />
+      <Header name={blogData.name}/>
+      <About image={blogData.image} about={blogData.about}/>
       <ArticleList />
-      <Article />
+      <Article 
+        title={blogData.title} 
+        date={blogData.date} 
+        preview={blogData.preview}
+      />
     </div>
   );
 }
